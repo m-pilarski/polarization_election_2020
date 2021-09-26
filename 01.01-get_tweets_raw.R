@@ -40,10 +40,10 @@ tweet_info_env <-
 ################################################################################
 ################################################################################
 
-tibble(screen_name = c("JoeBiden", "KamalaHarris",
-                       "realDonaldTrump", "Mike_Pence"),
-       tweets = list(NULL)) %>%
-  write_rds(glue("{data_dir}/0000-00-00.rds"))
+write_rds(tibble(
+  screen_name = c("JoeBiden", "KamalaHarris", "realDonaldTrump", "Mike_Pence"),
+  tweets = list(NULL)
+), glue("{data_dir}/0000-00-00.rds"))
 
 ################################################################################
 
