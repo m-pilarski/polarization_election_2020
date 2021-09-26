@@ -31,10 +31,11 @@ token_list <- read_rds("./resources/token_list.rds") # list of rtweet-tokens
 
 ################################################################################
 
-tweet_info_env <- 
-  rlang::env(object_size_max_B = 0L, 
-             tweets_count_stored = 0L, 
-             tweets_count_collected_this = 0L)
+tweet_info_env <- rlang::env(
+  object_size_max_B = 0L, 
+  tweets_count_stored = 0L, 
+  tweets_count_collected_this = 0L
+)
 
 ################################################################################
 ################################################################################
