@@ -37,29 +37,6 @@ tweet_info_env <-
              tweets_count_collected_this = 0L)
 
 ################################################################################
-
-gg_theme <- 
-  theme_gray(base_family="Franziska Pro", base_size=8) +
-  theme(plot.background=element_blank(),
-        plot.margin=unit(c(0, 4, 0, 4), "pt"),
-        legend.background=element_blank(),
-        legend.position="bottom",
-        legend.key=element_blank(),
-        panel.background=element_blank(),
-        panel.grid=element_line(color="gray95"),
-        strip.background=element_rect(fill="gray95", color="gray95"))
-
-theme_set(gg_theme)
-
-gg_theme_blank <- 
-  gg_theme +
-  theme(axis.title=element_blank(),
-        axis.text=element_blank(),
-        axis.ticks=element_blank(),
-        panel.grid=element_blank(),
-        panel.background=element_blank())
-
-################################################################################
 ################################################################################
 ################################################################################
 
