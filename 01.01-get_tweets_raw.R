@@ -94,30 +94,6 @@ dir_create(vers_dir_this, recurse=FALSE)
 ################################################################################
 ################################################################################
 
-tmp_df <- function(mode=c("get_new", "clear_old")){
-  
-  if(!exists(".tmp_df_env", where=.GlobalEnv, mode="environment")){
-    .tmp_df_env <<- rlang::new_environment(data=list(tmp_df_list=character(0)), 
-                                           parent=.GlobalEnv)
-  }
-  if(mode[1] == "get_new"){
-    .tmp_df_new <- glue("{temp_dir}/{stringi::stri_rand_strings(1, 50)}.df")
-    .tmp_df_env$tmp_df_list <- append(.tmp_df_env$tmp_df_list, .tmp_df_new)
-    return(.tmp_df_new)
-  }else if(mode[1] == "clear_old"){
-    for(.tmp_df in .tmp_df_env$tmp_df_list){try({dir_delete(.tmp_df)})}
-    .tmp_df_env$tmp_df_list <- character(0)
-    return(NULL)
-  }else{
-    stop("mode must be in c(\"get_new\", \"clear_old\")")
-  }
-  
-}
-
-################################################################################
-################################################################################
-################################################################################
-
 search_tweets_enhanced <- function(..., tweets_n_max=Inf, max_id=NULL){
   
   if(!rlang::env_has(token_env, "token")){
