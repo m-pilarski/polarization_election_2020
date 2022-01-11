@@ -8,13 +8,9 @@ if(grepl("(?i)windows", sessionInfo()$running)){
 
 library(fs)
 library(glue)
-library(bit64)
 library(magrittr)
 library(tidyverse)
-library(lubridate)
-library(mgcv)
 
-source("./resources/disk.frame_extensions.R")
 source("./resources/plot_to_file.R")
 source("./resources/ggplot_theme_set.R")
 source("./resources/bimodality_coefficient.R")
