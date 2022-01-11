@@ -41,11 +41,7 @@ sim_dist_plot <-
   sim_dist_data %>% 
   unnest_longer(sample, values_to="value") %>% 
   ggplot(aes(x=value, y=..ndensity..)) +
-  geom_histogram(
-    bins=20,
-    # breaks=seq(-1, 1, length.out=20),
-    color="gray98", fill="gray70"
-  ) +
+  geom_histogram(bins=20, color="gray98", fill="gray70") +
   scale_y_continuous(breaks=c(0, 1), labels=c("0", "max.")) +
   facet_wrap(
     vars(
