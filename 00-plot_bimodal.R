@@ -41,12 +41,6 @@ sim_dist_plot <-
   sim_dist_data %>% 
   unnest_longer(sample, values_to="value") %>% 
   ggplot(aes(x=value, y=..ndensity..)) +
-  # stat_density(
-  #   n=11, geom="bar",
-  #   position=position_dodge(width=0.9),
-  #   # breaks=seq(-1, 1, length.out=20),
-  #   fill="gray70"
-  # ) +
   geom_histogram(
     bins=20,
     # breaks=seq(-1, 1, length.out=20),
