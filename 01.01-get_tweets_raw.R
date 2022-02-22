@@ -309,8 +309,6 @@ get_tweets <- function(.transp_r, .workers=1){
   
   tryCatch({
     
-    stopifnot(.transp_r$screen_name != "realDonaldTrump")
-    
     attr(.transp_r$tweets$from_data, "path") %<>% 
       str_replace("^.+/data/01-tweets_raw(?=/)", data_dir) %>% 
       path_expand()
