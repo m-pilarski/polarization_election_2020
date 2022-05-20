@@ -34,8 +34,7 @@ sim_dist_data <-
         truncnorm::rtruncnorm(7e5, -1, 1, 0.75, 0.25))
   ) %>% 
   enframe(name="distribution", value="sample") %>% 
-  mutate(divi = map_dbl(sample, divisiveness_coefficient)) %>% 
-  mutate()
+  mutate(divi = map_dbl(sample, divisiveness_coefficient))
 
 sim_dist_plot <- 
   sim_dist_data %>% 
